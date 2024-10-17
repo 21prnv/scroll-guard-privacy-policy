@@ -1,101 +1,77 @@
-import Image from "next/image";
+// pages/index.js
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen bg-gray-100">
+      <Head>
+        <title>Privacy Policy</title>
+        <meta name="description" content="Privacy Policy for our app" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8 text-black">Privacy Policy</h1>
+        <div className="prose prose-lg max-w-none">
+          <h2>Important: Accessibility Service Usage</h2>
+          <p>
+            This app uses Android's Accessibility Service to help you manage
+            your screen time and reduce scroll addiction. Here's what you need
+            to know:
+          </p>
+          <ul>
+            <li>
+              <strong>Purpose:</strong> We use the Accessibility Service to
+              monitor your interaction with video reels and help prevent
+              excessive scrolling.
+            </li>
+            <li>
+              <strong>How it works:</strong> The app detects when you're viewing
+              reels and may intervene to limit scrolling after a certain
+              duration.
+            </li>
+            <li>
+              <strong>Permissions:</strong> We require Accessibility Service
+              permissions to function. You can enable or disable this at any
+              time in your device settings.
+            </li>
+            <li>
+              <strong>Data usage:</strong> We do not collect, store, or transmit
+              any personal data through this service.
+            </li>
+            <li>
+              <strong>Limitations:</strong> This app does not change any system
+              settings or interfere with other apps' functionality.
+            </li>
+          </ul>
+
+          <h2>Children's Privacy</h2>
+          <p>
+            These Services do not address anyone under the age of 13. We do not
+            knowingly collect personally identifiable information from children
+            under 13 years of age. In the case we discover that a child under 13
+            has provided us with personal information, we immediately delete
+            this from our servers. If you are a parent or guardian and you are
+            aware that your child has provided us with personal information,
+            please contact us so that we will be able to do the necessary
+            actions.
+          </p>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">Contact Us</h2>
+          <p>
+            If you have any questions or suggestions about our Privacy Policy,
+            do not hesitate to contact us at:
+          </p>
+          <p className="font-semibold">
+            Email:{" "}
+            <a
+              href="mailto:pranavpatil6251@gmail.com"
+              className="text-blue-600 hover:underline"
+            >
+              pranavpatil6251@gmail.com
+            </a>
+          </p>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
